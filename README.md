@@ -1,4 +1,4 @@
-# UnitConversionApi1
+# UnitConversionApi 
 
 A RESTful **ASP.NET Core 10 Web API** for converting numerical values between different units of measurement. The API follows a clean, maintainable architecture with separation of concerns, dependency injection, centralized exception handling, and unit testing support.
 
@@ -119,9 +119,10 @@ Request:
 
 ```json
 {
-  "value": 100,
-  "fromUnit": "Meter",
-  "toUnit": "Foot"
+  "category": "temperature",
+  "fromUnit": "celsius",
+  "toUnit": "fahrenheit",
+  "value": 100
 }
 ```
 
@@ -130,10 +131,11 @@ Example response:
 ```json
 {
   "originalValue": 100,
-  "fromUnit": "Meter",
-  "toUnit": "Foot",
-  "convertedValue": 328.084
+  "fromUnit": "celsius",
+  "toUnit": "fahrenheit",
+  "convertedValue": 212
 }
+
 ```
 
 *The response illustrates the expected conversion format.*
@@ -182,6 +184,6 @@ The architecture makes it easier to introduce additional conversion categories a
 
 ## Author
 
-**UnitConversionApi1**
+Batul Trunkwala
 
-Developed as an ASP.NET Core Web API technical challenge, demonstrating REST API development, clean separation of responsibilities, dependency injection, middleware, and unit testing.
+**UnitConversionApi**
